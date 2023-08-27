@@ -1,6 +1,6 @@
-CREATE Database CarShowroom
-GO
+CREATE Database CarShowroom;
 
+use CarShowroom;
 
 CREATE TABLE Categories (
   Id int primary key IDENTITY(1,1),
