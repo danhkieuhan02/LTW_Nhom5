@@ -1,13 +1,13 @@
 CREATE Database CarShowroom
-GO;
+GO
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
+
 CREATE TABLE Categories (
   Id int primary key IDENTITY(1,1),
   catName nvarchar(200) DEFAULT NULL
 ) ;
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
+
 CREATE TABLE Contacts (
 Id int primary key IDENTITY(1,1),
   Name nvarchar(255) NOT NULL,
@@ -15,7 +15,15 @@ Id int primary key IDENTITY(1,1),
   Message nvarchar(1000) NOT NULL
 ) ;
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
+
+CREATE TABLE Users (
+  Id int primary key IDENTITY(1,1),
+  Name nvarchar(255) NOT NULL,
+  Email nvarchar(255) NOT NULL,
+  Password nvarchar(255) NOT NULL
+) ;
+
+
 CREATE TABLE Products (
   Id int primary key IDENTITY(1,1),
   ProductName nvarchar(200) DEFAULT NULL,
@@ -27,12 +35,4 @@ CREATE TABLE Products (
   CONSTRAINT FK_CATE_PRODUCT FOREIGN KEY (CategoryId) REFERENCES Categories(Id),
   CONSTRAINT FK_USER_PRODUCT FOREIGN KEY (CreateBy) REFERENCES Users(Id),
 
-) ;
-
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-CREATE TABLE Users (
-  Id int primary key IDENTITY(1,1),
-  Name nvarchar(255) NOT NULL,
-  Email nvarchar(255) NOT NULL,
-  Password nvarchar(255) NOT NULL
 ) ;
