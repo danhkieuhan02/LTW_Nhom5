@@ -28,8 +28,10 @@ namespace CarShowroom.Account
             {
                 ModelState.AddModelError("", "Tên đăng nhập hoặc email đã tồn tại!");
                 Response.Redirect("Register.aspx");
+                return;
             }
-
+            db.Users.InsertOnSubmit(u);
+            db.SubmitChanges();
         }
     }
 }

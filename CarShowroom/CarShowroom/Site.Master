@@ -44,7 +44,7 @@
                                 %>
                             </ul>
                         </li>
-                       <%-- <li class="nav-item dropdown">
+                        <%-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-black" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Thư Viện
                             </a>
@@ -62,12 +62,26 @@
                         <li class="nav-item">
                             <a class="nav-link text-black" aria-disabled="true">Tin tức và Dịch vụ</a>
                         </li>--%>
+                        <% if (Session["Id"] == null)
+                           { %>
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Đăng Nhập</a>
+                            <a class="nav-link text-black" href="/Account/Login.aspx">Đăng Nhập</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-black" href="/Account/Register.aspx">Đăng Ký</a>
                         </li>
+                        <% }
+                           else
+                           { %>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Hi <%=Session["Username"]%></a>
+                        </li>
+                        <li class="nav-item">
+                            <form runat="server">
+                            <asp:LinkButton ID="btnLogout" CssClass="nav-link text-black" OnClick="btnLogout_Click" runat="server">Đăng xuất</asp:LinkButton>
+                            </form>
+                        </li>
+                        <% } %>
                     </ul>
                 </div>
             </div>

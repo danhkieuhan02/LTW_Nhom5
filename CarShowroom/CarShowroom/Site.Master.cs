@@ -19,5 +19,10 @@ namespace CarShowroom
 
             //Thêm danh mục mới 
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+        }
     }
 }
