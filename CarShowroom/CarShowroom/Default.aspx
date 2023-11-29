@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div id="x" class="carousel slide">
+    <div id="x" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators" data-bs-ride="carousel">
             <button type="button" data-bs-target="#x" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1">
@@ -104,7 +104,7 @@
                                     <div>
                                         <a href="<%=href%>" class="btn btn-success"><%=ListProduct[i].Category.catName %></a>
                                         <div class="text-center d-flex">
-                                            <a href="Contact.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 w-50 btn btn-outline-primary">Tư vấn</a>
+                                            <a href="Contact.aspx" class="mt-3 w-50 btn btn-outline-primary">Tư vấn</a>
                                             <a href="Order.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 ms-1 w-50 btn btn-outline-info">Mua ngay</a>
                                         </div>
                                     </div>
@@ -142,8 +142,7 @@
                     </div>
                     <h4>DỊCH VỤ SỬA CHỮA</h4>
                     Ngoài dịch vụ bảo dưỡng và sửa chữa những hiện tượng bất thường trên xe, chúng tôi cũng cung cấp
-                        dịch vụ sửa chữa đối với
-                        những hư hỏng do va chạm mà chiếc xe của Khách hàng gặp phải trong quá trình sử dụng.
+                        dịch vụ sửa chữa trong quá trình sử dụng.
                 </div>
                 <div class="col-md-3 text-center">
                     <div>

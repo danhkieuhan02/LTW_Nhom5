@@ -13,6 +13,42 @@ namespace CarShowroom {
     public partial class Contact1 {
         
         /// <summary>
+        /// LabelSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSuccess;
+        
+        /// <summary>
+        /// ctName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ctName;
+        
+        /// <summary>
+        /// ctEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ctEmail;
+        
+        /// <summary>
+        /// ctMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ctMsg;
+        
+        /// <summary>
         /// btnSendContact control.
         /// </summary>
         /// <remarks>

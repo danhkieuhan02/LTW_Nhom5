@@ -32,6 +32,7 @@ namespace CarShowroom.Account
             }
             db.Users.InsertOnSubmit(u);
             db.SubmitChanges();
+            Response.Redirect("Login.aspx");
         }
     }
 }

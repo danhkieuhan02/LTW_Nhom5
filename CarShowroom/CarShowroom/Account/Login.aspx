@@ -24,7 +24,7 @@
                 <div class="my-3 text-center">
                     <asp:Button CssClass="btn btn-outline-dark" ID="BtnLogin" runat="server" Text="Đăng nhập" OnClick="Button1_Click" />
                 </div>
-                <a href="#" class="nav-link">Chưa có tài khoản? Click để đăng ký tài khoản.</a>
+                <a href="Register.aspx" class="nav-link">Chưa có tài khoản? Click để đăng ký tài khoản.</a>
             </div>
         </div>
     </form>
