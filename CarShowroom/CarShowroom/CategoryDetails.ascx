@@ -1,11 +1,20 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryDetails.ascx.cs" Inherits="CarShowroom.CategoryDetails" %>
 <%-- Hien thi list san pham theo danh muc --%>
-<div class="container pt-5">
+<div class="container" style="padding-top: 100px">
     <div class="row">
-        <% for (int i = 0; i < listProd.Count; i++)
+        <% if (listProd.Count == 0)
+           {%>
+        <p class="text-center display-5">Không có sản phẩm nào thuộc danh mục này</p>
+
+        <%
+           }
+           else
            {
-               var href = "DetailsCategory.aspx?IdProd=" + listProd[i].Id;
-               var hrefProd = "/DetailsProduct.aspx?IdProd=" + listProd[i].Id; 
+
+               for (int i = 0; i < listProd.Count; i++)
+               {
+                   var href = "DetailsCategory.aspx?IdProd=" + listProd[i].Id;
+                   var hrefProd = "/DetailsProduct.aspx?IdProd=" + listProd[i].Id; 
         %>
         <div class="col-md-4">
             <div class="products">
@@ -29,6 +38,9 @@
                 </ul>
             </div>
         </div>
-        <%} %>
+        <%
+           }
+        }
+        %>
     </div>
 </div>

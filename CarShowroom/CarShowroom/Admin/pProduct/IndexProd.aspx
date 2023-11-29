@@ -20,7 +20,6 @@
             <tr>
                 <th>Id</th>
                 <th>Tên Xe</th>
-                <th>Hãng</th>
                 <th>Ảnh Bìa</th>
                 <th>Giá</th>
                 <th>Danh Mục</th>
@@ -34,7 +33,6 @@
 
                 <td><%# Eval("Id") %></td>
                 <td><%# Eval("ProductName")%></td>
-                <td></td>
                 <td>
                     <img src="<%# Eval("CoverImg") %>" style="width: 50px; height: 50px; object-fit: cover;" class="rounded rounded-circle shadow" />
                 </td>

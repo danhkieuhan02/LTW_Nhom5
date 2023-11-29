@@ -22,7 +22,7 @@
                 </div>
                 <div class="mt-3">
                     <label for="Pwd" class="control-label">Mật khẩu</label>
-                    <asp:TextBox ID="uPassword" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox TextMode="Password" ID="uPassword" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="my-3 text-center">
                     <asp:Button CssClass="btn btn-outline-dark" ID="Button1" runat="server" Text="Đăng ký" OnClick="Button1_Click" />

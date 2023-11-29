@@ -11,7 +11,10 @@ namespace CarShowroom.Admin
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+            if (Session["Id"] == null)
+            {
+                Response.Redirect("../../Account/Login.aspx");
+            }
 		}
 	}
 }

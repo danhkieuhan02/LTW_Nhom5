@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-profile.html">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="user"></i><span class="align-middle">Logged with <%=Session["Username"] %></span>
                 </a>
             </li>

@@ -34,22 +34,20 @@
     <div class="m-auto mt-4 sticky-top shadow-sm">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid justify-content-center">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-4" type="options" placeholder="Nhập tên, hãng, dòng xe..."
+                <form class="d-flex" action="Search.aspx" role="search">
+                    <input class="form-control me-4" name="keyword" type="options" placeholder="Nhập tên, hãng, dòng xe..."
                         aria-label="Search" />
-                    <div class="input-group">
-                        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Danh Mục</button>
-                        <ul class="dropdown-menu">
-                            <%
-                                foreach (var item in Cat)
-                                {
-                            %>
-                            <li><a href='<%="DetailsCategory.aspx?IdProd=" + item.Id%>' class="dropdown-item"><%= item.catName %></a></li>
-                            <% 
+                    <select class="form-select" name="cateId">
+                        <option value="">-- Chọn danh mục --</option>
+                        <%
+                            foreach (var item in Cat)
+                            {
+                        %>
+                        <option value="<%=item.Id%>"><%= item.catName %></option>
+                        <% 
                                 }
-                            %>
-                        </ul>
-                    </div>
+                        %>
+                    </select>
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -82,35 +80,7 @@
     <br>
     <br>
     <br>
-    <h3 class="text-center">DÒNG XE NỔI BẬT</h3>
-    <p>code hiển thị dòng xe bán chạy nhất</p>
-    <%--  <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="products">
-                    <ul class="products">
-                        <li>
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="#" class="product-thumb">
-                                        <img src="asset/img/prods_1.jpg">
-                                    </a>
-                                    <a href="#" class="buy-now">xem chi tiết</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="#" class="product-cat">BMW</a>
-                                    <a href="#" class="product-name">BMW M4 series 2023</a>
-                                    <a href="#" class="product-price">48.900$</a>
-                                    <a href="#" class="product-content">Test</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>--%>
+
     <h3 class="text-center">CÁC SẢN PHẨM</h3>
     <br>
     <div class="container">
@@ -133,9 +103,9 @@
                                 <div class="product-info text-center">
                                     <div>
                                         <a href="<%=href%>" class="btn btn-success"><%=ListProduct[i].Category.catName %></a>
-                                        <div class="text-center" style:"display-flex">
-                                        <a href="Contact.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 btn btn-outline-primary">Tư vấn</a>
-                                        <a href="Order.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 btn btn-outline-info">Mua ngay</a>                                            
+                                        <div class="text-center d-flex">
+                                            <a href="Contact.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 w-50 btn btn-outline-primary">Tư vấn</a>
+                                            <a href="Order.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 ms-1 w-50 btn btn-outline-info">Mua ngay</a>
                                         </div>
                                     </div>
                                     <a href="<%=href%>" class="product-name"><%=ListProduct[i].ProductName %></a>
@@ -165,33 +135,7 @@
                         chất
                         lượng cao, nhanh chóng.!
                 </div>
-                <div class="col-md-3 text-center">
-                    <div>
-                        <img src="asset/img/vayvon.jpg">
-                    </div>
-                    <h4>HỖ TRỢ VAY VỐN</h4>
-                    Các sản phẩm vay mua xe của chúng tôi đáp ứng đa dạng các nhu cầu tài chính của khách hàng!
-                </div>
-
-                <div class="col-md-3 text-center">
-                    <div>
-                        <img src="asset/img/phukien.jpg">
-                    </div>
-                    <h4>PHỤ TÙNG & PHỤ KIỆN</h4>
-                    Tất cả các phụ tùng, phụ kiện chính hãng, được nhập khẩu từ Hàn Quốc và các nước trong khu vực.
-                </div>
-                <div class="col-md-3 text-center">
-                    <div>
-                        <img src="asset/img/baoduong.jpg">
-                    </div>
-                    <h4>DỊCH VỤ BẢO DƯỠNG</h4>
-                    Dịch vụ kiểm tra, bảo dưỡng một cách định kỳ để đảm bảo chiếc xe của Khách hàng luôn được vận
-                        hành hiệu quả.
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row pb-5 justify-content-center">
+                
                 <div class="col-md-3 text-center">
                     <div class="text-center mb-2">
                         <img src="asset/img/suachua.jpg">
@@ -210,7 +154,17 @@
                         chế cho xe của Khách
                         hàng nằm trong chế độ được bảo hành.
                 </div>
+                
+                <div class="col-md-3 text-center">
+                    <div>
+                        <img src="asset/img/baoduong.jpg">
+                    </div>
+                    <h4>DỊCH VỤ BẢO DƯỠNG</h4>
+                    Dịch vụ kiểm tra, bảo dưỡng một cách định kỳ để đảm bảo chiếc xe của Khách hàng luôn được vận
+                        hành hiệu quả.
+                </div>
             </div>
         </div>
+
     </div>
 </asp:Content>

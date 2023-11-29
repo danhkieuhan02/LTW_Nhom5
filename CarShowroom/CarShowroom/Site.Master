@@ -75,6 +75,9 @@
         <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
     </div>
     <div id="footer">
+        <div class="container border-top mt-4 py-4">
+            <p>Project Lập trình web - DNC 2023</p>
+        </div>
     </div>
 
     <script src="/Asset/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

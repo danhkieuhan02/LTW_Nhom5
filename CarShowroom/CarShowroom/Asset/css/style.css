@@ -90,7 +90,7 @@ ul.products li .product-top a.buy-now {
     padding: 10px 0px;
     /* nút */
     position: absolute;
-    bottom: -23px;
+    bottom: -45px;
     width: 100%;
     transition: 0.25s ease-in-out;
     opacity: 0.85;
