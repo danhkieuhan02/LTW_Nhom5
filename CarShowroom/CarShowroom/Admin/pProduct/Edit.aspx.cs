@@ -70,6 +70,7 @@ namespace CarShowroom.Admin.pProduct
                 p.CoverImg = "/Upload/" + pCoverImg.FileName;
             }
             db.SubmitChanges();
+            Response.Redirect("IndexProd.aspx");
         }
     }
 }

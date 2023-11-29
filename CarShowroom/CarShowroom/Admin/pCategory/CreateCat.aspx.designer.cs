@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarShowroom {
+namespace CarShowroom.Admin.pCategory {
     
     
-    public partial class Contact1 {
+    public partial class CreateCat {
         
         /// <summary>
-        /// btnSendContact control.
+        /// cName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSendContact;
+        protected global::System.Web.UI.WebControls.TextBox cName;
+        
+        /// <summary>
+        /// cCreate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cCreate;
     }
 }

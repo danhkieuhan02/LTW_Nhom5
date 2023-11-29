@@ -44,24 +44,7 @@
                                 %>
                             </ul>
                         </li>
-                        <%-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-black" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Thư Viện
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Kho Ảnh</a></li>
-                                <li><a class="dropdown-item" href="#">Kho Videos</a></li>
-                            </ul>
-                        </li>--%>
-                        <%--<li class="nav-item">
-                            <a class="nav-link text-black" href="#">Mua Xe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" aria-disabled="true">Giá Cả</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" aria-disabled="true">Tin tức và Dịch vụ</a>
-                        </li>--%>
+
                         <% if (Session["Id"] == null)
                            { %>
                         <li class="nav-item">
@@ -77,8 +60,11 @@
                             <a class="nav-link text-black" href="#">Hi <%=Session["Username"]%></a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-black" href="/Admin/Pages/Dashboard.aspx">Trang quản lí</a>
+                        </li>
+                        <li class="nav-item">
                             <form runat="server">
-                            <asp:LinkButton ID="btnLogout" CssClass="nav-link text-black" OnClick="btnLogout_Click" runat="server">Đăng xuất</asp:LinkButton>
+                                <asp:LinkButton ID="btnLogout" CssClass="nav-link text-black" OnClick="btnLogout_Click" runat="server">Đăng xuất</asp:LinkButton>
                             </form>
                         </li>
                         <% } %>

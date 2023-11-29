@@ -133,7 +133,10 @@
                                 <div class="product-info text-center">
                                     <div>
                                         <a href="<%=href%>" class="btn btn-success"><%=ListProduct[i].Category.catName %></a>
-                                        <a href="Order.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 btn btn-outline-primary">Mua ngay</a>
+                                        <div class="text-center" style:"display-flex">
+                                        <a href="Contact.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 btn btn-outline-primary">Tư vấn</a>
+                                        <a href="Order.aspx?IdProd=<%= ListProduct[i].Id%>" class="mt-3 btn btn-outline-info">Mua ngay</a>                                            
+                                        </div>
                                     </div>
                                     <a href="<%=href%>" class="product-name"><%=ListProduct[i].ProductName %></a>
                                     <a href="<%=href%>" class="product-price"><%=string.Format("{0:N0} VND",ListProduct[i].Price) %></a>

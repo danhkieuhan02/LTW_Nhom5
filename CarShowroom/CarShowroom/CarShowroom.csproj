@@ -107,6 +107,9 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Admin\Pages\Dashboard.aspx" />
+    <Content Include="Admin\pCategory\CreateCat.aspx" />
+    <Content Include="Admin\pCategory\EditCat.aspx" />
+    <Content Include="Admin\pCategory\IndexCat.aspx" />
     <Content Include="Admin\pProduct\Create.aspx" />
     <Content Include="Admin\pProduct\Edit.aspx" />
     <Content Include="Admin\pProduct\IndexProd.aspx" />
@@ -124,7 +127,9 @@
     <Content Include="Admin\Public\js\app.js.LICENSE.txt" />
     <Content Include="Admin\_MenuLeft.ascx" />
     <Content Include="Admin\_MenuTop.ascx" />
+    <Content Include="Asset\css\styleContact.css" />
     <Content Include="Asset\css\style.css" />
+    <Content Include="Asset\css\styleOrderDetails.css" />
     <Content Include="Asset\icon\dongxe.png" />
     <Content Include="Asset\icon\hangxe.png" />
     <Content Include="Asset\icon\hopso.png" />
@@ -329,6 +334,27 @@
     </Compile>
     <Compile Include="Admin\Pages\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\pCategory\CreateCat.aspx.cs">
+      <DependentUpon>CreateCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\pCategory\CreateCat.aspx.designer.cs">
+      <DependentUpon>CreateCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\pCategory\EditCat.aspx.cs">
+      <DependentUpon>EditCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\pCategory\EditCat.aspx.designer.cs">
+      <DependentUpon>EditCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\pCategory\IndexCat.aspx.cs">
+      <DependentUpon>IndexCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\pCategory\IndexCat.aspx.designer.cs">
+      <DependentUpon>IndexCat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\pProduct\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>

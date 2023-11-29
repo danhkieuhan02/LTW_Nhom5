@@ -10,14 +10,13 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="index.html">
+                <a class="sidebar-link" href="../../Default.aspx">
                     <i class="align-middle" data-feather="sliders"></i><span
-                        class="align-middle">Dashboard</span>
+                        class="align-middle">Client page</span>
                 </a>
             </li>
-
             <li class="sidebar-item active">
-                <a class="sidebar-link" href="pages-blank.html">
+                <a class="sidebar-link" href="/Admin/pCategory/IndexCat.aspx">
                     <i class="align-middle" data-feather="book"></i><span class="align-middle">Category</span>
                 </a>
             </li>
@@ -28,20 +27,7 @@
             </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="pages-profile.html">
-                    <i class="align-middle" data-feather="user"></i><span class="align-middle">Profile</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-in.html">
-                    <i class="align-middle" data-feather="log-in"></i><span class="align-middle">Sign In</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-up.html">
-                    <i class="align-middle" data-feather="user-plus"></i><span class="align-middle">Sign
-							Up</span>
+                    <i class="align-middle" data-feather="user"></i><span class="align-middle">Logged with <%=Session["Username"] %></span>
                 </a>
             </li>
         </ul>

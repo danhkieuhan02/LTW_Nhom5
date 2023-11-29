@@ -13,7 +13,9 @@
         <a href="Create.aspx" class="btn btn-outline-dark">Thêm</a>
     </div>
     <br />
-    <table class="table table-bordered table-hover text-center">
+    <form runat="server">
+        <asp:Label ID="lblMesg" runat="server" CssClass="text-success"></asp:Label>
+        <table class="table table-bordered table-hover text-center">
         <thead>
             <tr>
                 <th>Id</th>
@@ -26,29 +28,27 @@
             </tr>
         </thead>
         <tbody>
-            <% 
-                foreach (var items in prodList)
-                { 
-            %>
+            <asp:Repeater ID="repeaterProduct" runat="server">
+                <ItemTemplate>
+                    <tr>
 
-            <tr>
-
-                <td><%=items.Id%></td>
-                <td><%=items.ProductName%></td>
+                <td><%# Eval("Id") %></td>
+                <td><%# Eval("ProductName")%></td>
                 <td></td>
                 <td>
-                    <img src="<%=items.CoverImg%>" style="width: 50px; height: 50px; object-fit: cover;" class="rounded rounded-circle shadow" />
+                    <img src="<%# Eval("CoverImg") %>" style="width: 50px; height: 50px; object-fit: cover;" class="rounded rounded-circle shadow" />
                 </td>
-                <td><%=string.Format("{0:N0} VND",items.Price)%></td>
-                <td><%=items.Category.catName%></td>
+                <td><%# String.Format("{0:N0}", Eval("Price"))%></td>
+                <td><%# Eval("Category.catName")%></td>
                 <td>
-                    <a href=<%="Edit.aspx?IdProd=" + items.Id%> class="btn btn-outline-dark">Sửa</a>
-                    <a href="#" class="btn btn-outline-dark">Xóa</a>
+                    <a href="Edit.aspx?IdProd=<%#Eval("Id") %>" class="btn btn-outline-dark">Sửa</a>
+                    <asp:LinkButton ID="btnDel" OnClientClick="return confirm('Bạn có muốn xóa sản phẩm này?')" 
+                        CommandArgument=<%# Eval("Id") %> OnClick="btnDel_Click" CssClass="btn btn-outline-dark" runat="server">Xóa</asp:LinkButton>
                 </td>
             </tr>
-            <%
-                }
-            %>
+                </ItemTemplate>
+            </asp:Repeater>
         </tbody>
     </table>
+    </form>
 </asp:Content>
